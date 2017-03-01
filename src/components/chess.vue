@@ -117,7 +117,7 @@
     name: 'chess',
     data () {
       return {
-        lattice_size: 100,
+        lattice_size: 40,
         pieceList: {
           red: [{
             name: '车',
@@ -441,7 +441,7 @@
 
 
 <style lang="less" scoped>
-  @board-size: 800px;
+  @board-size: 320px;
   .bg-board{
     position: relative;
     width: 100%;
@@ -450,10 +450,10 @@
   .btn-back{
     position: absolute;
     top: 0;left: 0;
-    border: 2px solid saddlebrown;
+    border: 1px solid saddlebrown;
     color: saddlebrown;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 20px;
     z-index: 999;
     padding:20px;
   }
@@ -470,21 +470,21 @@
       left: 0;
       bottom: 0;
       right: 0;
-      border: 2px solid saddlebrown;
+      border: 1px solid saddlebrown;
       font-size: 0;
       .row {
         .td {
           display: inline-block;
           width: @board-size/8;
           height: @board-size/8;
-          border: 2px solid saddlebrown;
+          border: 1px solid saddlebrown;
           box-sizing: border-box;
           .diagonal {
             left: 50%;
             position: relative;
             width: @board-size/8;
             height: @board-size/8;
-            border: 2px solid saddlebrown;
+            border: 1px solid saddlebrown;
             box-sizing: border-box;
             transform: rotate(45deg) scale(1.4);
             &.t {
@@ -506,9 +506,9 @@
         &.cross {
           height: @board-size/8;
           line-height: @board-size/8;
-          font-size: 40px;
+          font-size: 20px;
           color: saddlebrown;
-          border: 2px solid saddlebrown;
+          border: 1px solid saddlebrown;
           box-sizing: border-box;
         }
       }
@@ -535,7 +535,7 @@
         color: #333;
         line-height: @board-size/8*0.8;
         text-align: center;
-        font-size: 50px;
+        font-size: 20px;
         font-weight: bold;
         transition: .3s;
         &.black {
@@ -567,9 +567,9 @@
       width: 100%;
       span{
         flex: 1;
-        font-size: 40px;
+        font-size: 20px;
         padding:20px 0;
-        border: 2px solid saddlebrown;
+        border: 1px solid saddlebrown;
         color: saddlebrown;
         font-weight: bold;
         &:hover{
